@@ -21,6 +21,8 @@ public class FreeBoardController {
 	
 	@RequestMapping(value="/freeboard")
 	public String index(Model model, HttpSession session,@RequestParam(defaultValue="1") String pageNum) {
+		
+		System.out.println("소스 수정");
 		String pageCount = ss.selectOne("a.selectPageCount");
 		int start = 1;
 		int end = 5;
